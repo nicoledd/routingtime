@@ -1,10 +1,10 @@
 #!/bin/bash
 #SBATCH -J routingtimes
-#SBATCH --output="out-%A_%a.out"
+#SBATCH --output="out/out-%A_%a.out"
 #SBATCH --time=00:05:00
 #SBATCH --ntasks=1
 #SBATCH --mem-per-cpu=4G
-#SBATCH --array=0-5
+#SBATCH --array=0-11
 #SBATCH --exclude=openlab[30-33]
 # Mail me when starting and stopping
 #SBATCH --mail-type=END,FAIL

@@ -30,10 +30,10 @@ pVals = np.arange(0, 0.02, 0.01) # change to increments of 0.01 later
 pLen = len(pVals)
 nVals = [i for i in range(5, 20, 5)] # change to 100 later
 nLen = len(nVals)
-totalJobs = pLen*nLen
+un = pLen*nLen
 samples = 2
 
-idmod = args.id % (totalJobs/samples)
+idmod = args.id % un
 
 n = nVals[idmod//pLen]
 p = pVals[idmod % pLen]
