@@ -11,22 +11,31 @@
 #SBATCH --mail-user=nido4478@colorado.edu
 
 
-set -euo pipefail
-. /usr/share/Modules/init/bash
-. /etc/profile.d/ummodules.sh
-
 module load Python3
 
-declare -a commands
+
+python main.py $SLURM_ARRAY_TASK_ID
 
 
-for p in $(seq 0 .01 .02); do
-		for n in {5..10..5}; do
-				for i in {1..10}; do
-						commands += ("Python3 'main.py' '${n}' '${p}'")
-					done
-			done
-	done
 
 
-eval "${commands[${SLURM_ARRAY_TASK_ID}]}"
+#set -euo pipefail
+#. /usr/share/Modules/init/bash
+#. /etc/profile.d/ummodules.sh
+
+
+#module load Python3
+
+#declare -a commands
+
+
+#for p in $(seq 0 .01 .02); do
+#		for n in {5..10..5}; do
+#				for i in {1..10}; do
+#						commands += ("Python3 'main.py' '${n}' '${p}'")
+#					done
+#			done
+#	done
+
+
+#eval "${commands[${SLURM_ARRAY_TASK_ID}]}"
