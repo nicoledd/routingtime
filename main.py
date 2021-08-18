@@ -25,7 +25,7 @@ parser.add_argument('-id', type=int, required=True) # make this 1 arg
 args = parser.parse_args()
 
 
-pVals = [i for i in np.arange(0, 0.02, 0.01)] # change to increments of 0.01 later
+pVals = np.arange(0, 0.02, 0.01) # change to increments of 0.01 later
 pLen = len(pVals)
 nVals = [i for i in range(5, 20, 5)] # change to 100 later
 nLen = len(nVals)
