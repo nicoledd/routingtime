@@ -32,8 +32,8 @@ nLen = len(nVals)
 samples = 1
 
 
-n = nVals[args.id/pLen]
+n = nVals[args.id//pLen]
 p = pVals[args.id % pLen]
 
 
-test(n, p)
+test(n*n, p)
