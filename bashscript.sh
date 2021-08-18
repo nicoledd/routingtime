@@ -14,7 +14,7 @@
 module load Python3
 
 
-python main.py $SLURM_ARRAY_TASK_ID
+python3 main.py $SLURM_ARRAY_TASK_ID
 
 
 
