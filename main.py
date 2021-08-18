@@ -26,13 +26,12 @@ parser.add_argument('-id', type=int, required=True) # make this 1 arg
 args = parser.parse_args()
 
 
-pVals = np.arange(0, 0.02, 0.01) # change to increments of 0.01 later
+pVals = np.arange(0, 0.1, 0.01) # change to increments of 0.01 later
 pLen = len(pVals)
-nVals = [i for i in range(5, 20, 5)] # change to 100 later
+nVals = [i for i in range(5, 35, 5)] # change to 100 later
 nLen = len(nVals)
 un = pLen*nLen
-samples = 2
-
+samples = 50
 idmod = args.id % un
 
 n = nVals[idmod//pLen]
