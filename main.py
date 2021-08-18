@@ -12,7 +12,8 @@ from algorithm import Grid, Algorithm
 def test(n, p):
     grid = Grid(n,p)
     algorithm = Algorithm(grid.G, n, grid.m)
-    print(n, p, algorithm.time, algorithm.m) # prints routing time and size of grid
+    print("number of nodes,p,routing time,number of nodes after defects")
+    print(n, ",", p, ",", algorithm.time, ",", algorithm.m) # prints routing time and size of grid
     return algorithm.time, algorithm.m
 
 
