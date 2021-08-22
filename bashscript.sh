@@ -1,17 +1,17 @@
 #!/bin/bash
 #SBATCH -J routingtimes
 #SBATCH --output="out0/out-%A_%a.out"
-#SBATCH --time=07:00:00
+#SBATCH --time=01:00:00
 #SBATCH --ntasks=1
 #SBATCH --mem-per-cpu=4G
-#SBATCH --array=0-499
+#SBATCH --array=0-199
 #SBATCH --exclude=openlab[30-33]
 # Mail me when starting and stopping
 #SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=nido4478@colorado.edu
-#SBATCH --account=scavenger
-#SBATCH --qos=scavenger
-#SBATCH --partition=scavenger
+# --account=scavenger
+# --qos=scavenger
+# --partition=scavenger
 
 
 module load Python3
