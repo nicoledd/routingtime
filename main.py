@@ -22,16 +22,22 @@ def test(n, p):
 # p = node defect probability
 parser = argparse.ArgumentParser(description='Process some integers.')
 parser.add_argument('-id', type=int, required=True) # make this 1 arg
-#parser.add_argument('-p', type=float, required=True) # make this 1 arg
 args = parser.parse_args()
 
 
-pVals = np.arange(0, 0.1, 0.01) # change to increments of 0.01 later
+
+# total number of jobs is pLen * nLen * samples
+    # out0:5*10*10 = 500
+        # p = 0, 0.01, 0.02, 0.03, 0.04
+        # n = 10, 20, 30, ..., 100
+        # samples = 10
+
+pVals = np.arange(0, 0.05, 0.01) # gather data for p = 0, 0.01, 0.02, 0.03, 0.04
 pLen = len(pVals)
-nVals = [i for i in range(5, 35, 5)] # change to 100 later
+nVals = [i for i in range(10, 110, 10)] # gather data for n = 10, 20, 30, ... , 100
 nLen = len(nVals)
 un = pLen*nLen
-samples = 50
+samples = 10 # try 10 samples of each point
 idmod = args.id % un
 
 n = nVals[idmod//pLen]
