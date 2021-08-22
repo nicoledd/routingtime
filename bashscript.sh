@@ -9,6 +9,9 @@
 # Mail me when starting and stopping
 #SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=nido4478@colorado.edu
+#SBATCH --account=scavenger
+#SBATCH --qos=scavenger
+#SBATCH --partition=scavenger
 
 
 module load Python3
