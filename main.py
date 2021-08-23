@@ -27,14 +27,14 @@ args = parser.parse_args()
 
 
 # total number of jobs is pLen * nLen * samples
-    # out0:2*10*10 = 200
+    # out0:2*5*10 = 100
         # p = 0, 0.01
         # n = 10, 20, 30, ..., 100
         # samples = 10
 
 pVals = np.arange(0, 0.02, 0.01) # gather data for p = 0, 0.01
 pLen = len(pVals)
-nVals = [i for i in range(10, 110, 10)] # gather data for n = 10, 20, 30, ... , 100
+nVals = [i for i in range(10, 60, 10)] # gather data for n = 10, 20, 30, ... , 100
 nLen = len(nVals)
 un = pLen*nLen
 samples = 10 # try 10 samples of each point

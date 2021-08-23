@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -J routingtimes
 #SBATCH --output="out0/out-%A_%a.out"
-#SBATCH --time=01:00:00
+#SBATCH --time=03:00:00
 #SBATCH --ntasks=1
 #SBATCH --mem-per-cpu=4G
 #SBATCH --array=0-199
@@ -15,6 +15,8 @@
 
 
 module load Python3
+
+python3 -m pip install networkx
 
 
 python3 main.py -id $SLURM_ARRAY_TASK_ID
