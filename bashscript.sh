@@ -16,7 +16,7 @@
 
 module load Python3
 
-python3 -m pip install networkx
+python3 -m pip install --user networkx
 
 
 python3 main.py -id $SLURM_ARRAY_TASK_ID
