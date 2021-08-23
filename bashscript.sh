@@ -19,4 +19,4 @@ module load Python3
 python3 -m pip install --user networkx
 
 
-python3 main.py -id $SLURM_ARRAY_TASK_ID
+python3 main.py -id $SLURM_ARRAY_TASK_ID || echo "TERRIBLE_ERROR_HAPPENED"
