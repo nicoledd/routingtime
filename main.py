@@ -51,7 +51,7 @@ pLen = len(pVals)
 nVals = [i for i in range(10, 110, 10)] # gather data for n = 10, 20, 30, ... , 100
 nLen = len(nVals)
 un = pLen*nLen
-samples = 90
+samples = 40
 idmod = args.id % un
 
 n = nVals[idmod//pLen]
