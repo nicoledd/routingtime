@@ -39,14 +39,14 @@ args = parser.parse_args()
         # p = 0.11, 0.12, 0.13, 0.14, 0.15, 0.16, 0.17, 0.18, 0.19, 0.2
         # n = 10...100 in increments of 10
         # samples = 10
-    # out3: 21*10*90
-        # p = 0...0.2 in increments 0.01
+    # out3: 10*10*10 = 1000
+        # p = 0...0.09 in increments 0.01
         # n = 10...100 in increments of 10
-        # samples = 90
+        # samples = 10
 
     # change 1. pVals and 2. arrays and 3. out directory (in bashscript.sh)
 
-pVals = [0, 0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.1, 0.11, 0.12, 0.13, 0.14, 0.15, 0.16, 0.17, 0.18, 0.19, 0.2] # gather data for p = various values
+pVals = [0, 0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09] # gather data for p = various values
 pLen = len(pVals)
 nVals = [i for i in range(10, 110, 10)] # gather data for n = 10, 20, 30, ... , 100
 nLen = len(nVals)
