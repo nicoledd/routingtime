@@ -44,10 +44,12 @@ args = parser.parse_args()
         # p = 0...0.09 in increments 0.01
         # n = 10...100 in increments of 10
         # samples = 10
-    # out4: 10*10*10 = 1000 AND 1*10*10 = 100
-        # p = 0.1...0.19 in increments 0.01 AND p = 0.2
+    # out4: 10*10*11 = 1100
+        # p = 0.1...0.2 in increments 0.01
         # n = 10...100
         # samples = 10
+    # out5: 10*10*10 = 1000
+        # p = 0...0.09
 
     # change 1. pVals and 2. arrays and 3. out directory (in bashscript.sh)
 
