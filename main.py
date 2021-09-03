@@ -53,14 +53,14 @@ args = parser.parse_args()
 
     # change 1. pVals and 2. arrays and 3. out directory (in bashscript.sh)
 
-pVals = [0, 0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09]
+pVals = [0, 0.01, 0.02, 0.03, 0.04]
 #pVals = [0.1, 0.11, 0.12, 0.13, 0.14, 0.15, 0.16, 0.17, 0.18, 0.19] # gather data for p = various values
 #pVals = [0.2]
 pLen = len(pVals)
-nVals = [i for i in range(10, 110, 10)] # gather data for n = 10, 20, 30, ... , 100
+nVals = [i for i in range(10, 50, 10)] # gather data for n = 10, 20, 30, ... , 100
 nLen = len(nVals)
 un = pLen*nLen
-samples = 10
+samples = 5
 idmod = args.id % un
 
 n = nVals[idmod//pLen]
