@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH -J routingtimes
-#SBATCH --output="out4/out-%A_%a.out"
+#SBATCH --output="outfb/out-%A_%a.out"
 #SBATCH --time=05:00:00
 #SBATCH --ntasks=1
 #SBATCH --mem-per-cpu=4G
