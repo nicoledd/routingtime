@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH -J routingtimes
-#SBATCH --output="out4/out-%A_%a.out"
+#SBATCH --output="outfb/out-%A_%a.out"
 #SBATCH --time=05:00:00
 #SBATCH --ntasks=1
 #SBATCH --mem-per-cpu=4G
@@ -19,4 +19,4 @@ module load Python3
 python3 -m pip install --user networkx
 
 
-python3 main.py -id $SLURM_ARRAY_TASK_ID || echo "TERRIBLE_ERROR_HAPPENED"
+python3 main2.py -id $SLURM_ARRAY_TASK_ID || echo "TERRIBLE_ERROR_HAPPENED"
