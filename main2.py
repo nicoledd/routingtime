@@ -33,7 +33,7 @@ def erdos_renyi(x,p):
     
 
 def getRandGraphCoeff(x, p):
-    n = 50
+    n = 10
     coeffs = []
     for _ in range(n):
         G = erdos_renyi(x, p)
