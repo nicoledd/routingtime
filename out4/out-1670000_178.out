@@ -1,0 +1,4 @@
+/var/spool/slurm/slurmd.spool/job1670179/slurm_script: line 17: module: command not found
+Requirement already satisfied: networkx in /nfshomes/nicole/.local/lib/python3.6/site-packages
+Requirement already satisfied: decorator<5,>=4.3 in /nfshomes/nicole/.local/lib/python3.6/site-packages (from networkx)
+slurmstepd: error: *** JOB 1670179 ON rinzler00 CANCELLED AT 2021-09-02T20:53:14 ***

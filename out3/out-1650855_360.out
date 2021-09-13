@@ -1,0 +1,5 @@
+/var/spool/slurm/slurmd.spool/job1656228/slurm_script: line 17: module: command not found
+Requirement already satisfied: networkx in /nfshomes/nicole/.local/lib/python3.6/site-packages
+Requirement already satisfied: decorator<5,>=4.3 in /nfshomes/nicole/.local/lib/python3.6/site-packages (from networkx)
+number of nodes,p,routing time,number of nodes after defects
+4900 , 0 , 1059 , 4900

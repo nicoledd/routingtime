@@ -1,0 +1,3 @@
+Requirement already satisfied: networkx in /nfshomes/nicole/.local/lib/python3.8/site-packages (2.6.2)
+number of nodes,p,routing time,number of nodes after defects
+400 , 0.19 , 331 , 317

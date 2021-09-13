@@ -1,0 +1,2 @@
+Requirement already satisfied: networkx in /nfshomes/nicole/.local/lib/python3.8/site-packages (2.6.2)
+slurmstepd: error: *** JOB 1658958 ON openlab21 CANCELLED AT 2021-08-26T16:58:53 DUE TO TIME LIMIT ***
