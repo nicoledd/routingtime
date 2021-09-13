@@ -1,0 +1,8 @@
+/var/spool/slurm/slurmd.spool/job1687160/slurm_script: line 17: module: command not found
+Requirement already satisfied: networkx in /nfshomes/nicole/.local/lib/python3.6/site-packages
+Requirement already satisfied: decorator<5,>=4.3 in /nfshomes/nicole/.local/lib/python3.6/site-packages (from networkx)
+  File "main2.py", line 14
+    while (line := file.readline().rstrip()):
+                ^
+SyntaxError: invalid syntax
+TERRIBLE_ERROR_HAPPENED
