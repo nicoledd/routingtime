@@ -1,4 +1,3 @@
-import igraph
 from itertools import combinations
 import os
 import networkx as nx
@@ -38,8 +37,7 @@ def getRandGraphCoeff(x, p):
     coeffs = []
     for _ in range(n):
         G = erdos_renyi(x, p)
-        H = igraph.Graph.from_networkx(G)
-        c = igraph.Graph.transitivity_undirected(H)
+        c = nx.transitivity(G)
         coeffs.append(c)
     y = sum(coeffs)/n
     return y

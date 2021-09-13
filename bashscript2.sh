@@ -18,6 +18,5 @@ module load Python3
 
 python3 -m pip install --user networkx
 
-python3 -m pip install --user python-igraph
 
 python3 main2.py -id $SLURM_ARRAY_TASK_ID || echo "TERRIBLE_ERROR_HAPPENED"
