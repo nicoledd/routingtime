@@ -4,7 +4,7 @@
 #SBATCH --time=08:00:00
 #SBATCH --ntasks=1
 #SBATCH --mem-per-cpu=4G
-#SBATCH --array=0-9
+#SBATCH --array=0-24
 #SBATCH --exclude=openlab[30-33]
 # Mail me when starting and stopping
 #SBATCH --mail-type=END,FAIL
@@ -20,4 +20,4 @@ python3 -m pip install --user networkx
 
 python3 -m pip install --user ConfigModel_MCMC
 
-# python3 main2.py -id $SLURM_ARRAY_TASK_ID || echo "TERRIBLE_ERROR_HAPPENED"
+python3 main2.py -id $SLURM_ARRAY_TASK_ID || echo "TERRIBLE_ERROR_HAPPENED"
