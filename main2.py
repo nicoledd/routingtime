@@ -33,7 +33,7 @@ def erdos_renyi(x,p):
     
 
 def getRandGraphCoeff(x, p):
-    n = 1
+    n = 100
     coeffs = []
     for _ in range(n):
         G = erdos_renyi(x, p)
@@ -53,6 +53,6 @@ args = parser.parse_args()
 files = ['./facebook100txt/UCSB37.txt', './facebook100txt/Wake73.txt', './facebook100txt/Wesleyan43.txt', './facebook100txt/Auburn71.txt', './facebook100txt/Princeton12.txt', './facebook100txt/USFCA72.txt', './facebook100txt/Cal65.txt', './facebook100txt/UC61.txt', './facebook100txt/UC64.txt', './facebook100txt/Rutgers89.txt', './facebook100txt/Haverford76.txt', './facebook100txt/Carnegie49.txt', './facebook100txt/Mississippi66.txt', './facebook100txt/Vanderbilt48.txt', './facebook100txt/Santa74.txt', './facebook100txt/JMU79.txt', './facebook100txt/UPenn7.txt', './facebook100txt/UNC28.txt', './facebook100txt/NYU9.txt', './facebook100txt/Brown11.txt', './facebook100txt/USF51.txt', './facebook100txt/Brandeis99.txt', './facebook100txt/USC35.txt', './facebook100txt/Lehigh96.txt', './facebook100txt/Columbia2.txt']
 
 
-x, p = getDensity(files[args.id])
+x, p = getDensity(files[args.id%25])
 y = getRandGraphCoeff(x, p)
 print(x,y)
