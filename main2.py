@@ -14,7 +14,8 @@ def getGeo(filename):
     file.close()
     x = len(G)
     
-    H = max(nx.connected_components(G), key=len)
+    H = G.subgraph(max(nx.connected_components(G), key=len)).copy()
+
     y = nx.average_shortest_path_length(H)
 
     return x, y
