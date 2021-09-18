@@ -4,8 +4,6 @@ import networkx as nx
 import random
 import networkx as nx
 import argparse
-import ConfigModel_MCMC as CM
-
 
 
 
