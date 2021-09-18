@@ -11,7 +11,8 @@ import ConfigModel_MCMC as CM
 
 
 
-def getGraph(filename):
+# mean path length: RG1
+def getDensity(filename):
     G = nx.Graph()
     with open(filename) as file:
         while (line := file.readline().rstrip()):
@@ -19,17 +20,26 @@ def getGraph(filename):
             G.add_edge(int(edge[0]), int(edge[1]))
     file.close()
     x = len(G)
-    mcmc_object = CM.MCMC(G, False, False, False)
-    H = mcmc_object.get_graph()
-    return x, H
+    
+    p = nx.classes.function.density(G)
 
-
-def getPipCoeff(H):
-    V = max(nx.connected_components(H), key=len)
-    S = H.subgraph(V).copy()
-    y = nx.transitivity(S)
+    return x, p
+def erdos_renyi(x,p):
+    G = nx.Graph()
+    nodes = [i for i in range(x)]
+    G.add_nodes_from(nodes)
+    edges = list(combinations(nodes, 2))
+    for e in edges:
+        tmp = random.uniform(0, 1)
+        if(tmp < p):
+            G.add_edge(e[0],e[1])
+    return G
+def getRandGraphGeo(x, p):
+    G = erdos_renyi(x, p)
+    H = max(nx.connected_components(G), key=len)
+    S = G.subgraph(H).copy()
+    y = nx.average_shortest_path_length(S)
     return y
-
 
 # n = side length
 # p = node defect probability
@@ -41,6 +51,6 @@ args = parser.parse_args()
 files = ['./facebook100txt/UCSB37.txt', './facebook100txt/Wake73.txt', './facebook100txt/Wesleyan43.txt', './facebook100txt/Auburn71.txt', './facebook100txt/Princeton12.txt', './facebook100txt/USFCA72.txt', './facebook100txt/Cal65.txt', './facebook100txt/UC61.txt', './facebook100txt/UC64.txt', './facebook100txt/Rutgers89.txt', './facebook100txt/Haverford76.txt', './facebook100txt/Carnegie49.txt', './facebook100txt/Mississippi66.txt', './facebook100txt/Vanderbilt48.txt', './facebook100txt/Santa74.txt', './facebook100txt/JMU79.txt', './facebook100txt/UPenn7.txt', './facebook100txt/UNC28.txt', './facebook100txt/NYU9.txt', './facebook100txt/Brown11.txt', './facebook100txt/USF51.txt', './facebook100txt/Brandeis99.txt', './facebook100txt/USC35.txt', './facebook100txt/Lehigh96.txt', './facebook100txt/Columbia2.txt']
 
 
-x, H = getGraph(files[args.id%25])
-y = getPipCoeff(H)
-print(x,y)
+x, p = getDensity(file[args.id%25])
+y = getRandGraphGeo(x, p)
+print(x, y)
