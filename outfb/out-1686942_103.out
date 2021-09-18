@@ -1,4 +1,0 @@
-Requirement already satisfied: networkx in /nfshomes/nicole/.local/lib/python3.9/site-packages (2.6.3)
-WARNING: You are using pip version 21.1.3; however, version 21.2.4 is available.
-You should consider upgrading via the '/opt/local/stow/Python3-3.9.6/bin/python3 -m pip install --upgrade pip' command.
-18448 0.005723157342674499
